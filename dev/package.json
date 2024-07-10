@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts*",
+    "start": "ts-node src/example/index.js",
     "test1": "ts-node src/index.ts",
     "test2": "parcel index.html",
     "start:build": "tsc -w",
