@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start3": "ts-node src/index.ts*",
-    "test": "ts-node src/index.ts",
+    "start": "ts-node src/index.ts*",
+    "test1": "ts-node src/index.ts",
     "test2": "parcel index.html",
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
-    "start": "concurrently npm:start:*"
+    "start1": "concurrently npm:start:*"
   },
   "keywords": [],
   "author": "",
