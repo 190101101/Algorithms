@@ -1,4 +1,4 @@
-const bubbleSort = (p1) => {
+const bubbleSort = (p1:number[]):void => {
 	for (let i = 0; i < p1.length; i++){
 		for(let j = 0; j < p1.length - 1 - i; j++){
 			console.log(p1);
