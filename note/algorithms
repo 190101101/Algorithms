@@ -24,15 +24,15 @@
 	Exponential Search
 
 @Grafik Algoritmaları (Graph Algorithms)
-	Dijkstra's Algorithm
+	Dijkstras Algorithm
 	Bellman-Ford Algorithm
 	Floyd-Warshall Algorithm
-	Prim's Algorithm
-	Kruskal's Algorithm
-	A* Search Algorithm
-	Johnson's Algorithm
-	Tarjan's Algorithm (for strongly connected components)
-	Kosaraju's Algorithm
+	Prims Algorithm
+	Kruskals Algorithm
+	A Search Algorithm
+	Johnsons Algorithm
+	Tarjans Algorithm (for strongly connected components)
+	Kosarajus Algorithm
 	Topological Sorting
 	Edmonds-Karp Algorithm (for maximum flow)
 
@@ -55,7 +55,7 @@
 	Karatsuba Algorithm for fast multiplication
 
 @Ayır ve Fethet (Divide and Conquer)
-	Strassen's Algorithm (for matrix multiplication)
+	Strassens Algorithm (for matrix multiplication)
 	Closest Pair of Points	
 
 @Greedy Algoritmalar (Greedy Algorithms)
@@ -79,7 +79,7 @@
 	Fast Fourier Transform (FFT)
 
 @Geometri Algoritmaları (Geometry Algorithms)
-	Graham's Scan (Convex Hull)
+	Grahams Scan (Convex Hull)
 	Jarvis March (Gift Wrapping)
 	Line Intersection
 	Point in Polygon
@@ -93,3 +93,33 @@
 	Segment Tree (Range Query Operations)
 	Fenwick Tree (Binary Indexed Tree)
 
+@Rastgelelik ve Karıştırma (Randomization and Shuffling)
+	Knuth Shuffle (Fisher-Yates Shuffle): Diziyi rastgele sıraya koyar.
+	Sattolos Algorithm: Yalnızca döngüler oluşturan bir karıştırma algoritmasıdır.
+	Inside-Out Algorithm: Bir diziyi yerinde karıştırmadan önce rastgele bir sıralama elde eder.
+	Durstenfeld Shuffle: Fisher-Yates algoritmasının modern bir çeşididir.
+	Perfect Shuffle: Kartların tam olarak ortadan ikiye bölündüğü ve karıştırıldığı bir algoritma.
+	Riffle Shuffle: Kart destesi karıştırmak için kullanılan doğal bir karıştırma yöntemi.
+	Mongean Shuffle: Kartların belirli bir desenle karıştırılması yöntemi.
+	Overhand Shuffle: Kartların küçük gruplar halinde üstten alta doğru karıştırılması yöntemi.
+	GSR Shuffle (Gilbert-Shannon-Reeds): Rastgele kart karıştırma analizi için kullanılan bir yöntem.
+
+@Dizi İşlemleri (Array Manipulation)
+	Bubble Sort: Basit karşılaştırmalı sıralama algoritması.
+	Quick Sort: Böl ve fethet prensibine dayanan hızlı sıralama algoritması.
+	Merge Sort: Böl ve fethet yöntemine dayalı sıralama algoritması.
+	Insertion Sort: Sıralanmış ve sıralanmamış bölümleri yavaş yavaş oluşturur.
+	Selection Sort: Dizinin kalan kısmından en küçük elemanı seçerek sıralama yapar.
+	Heap Sort: Heap veri yapısını kullanarak sıralama yapar.
+
+@Olasılık ve İstatistik (Probability and Statistics)
+	Monte Carlo Simulation: Rastgele örnekleme ile karmaşık sistemleri modelleme.
+	Markov Chain Monte Carlo (MCMC): Markov zincirlerini kullanarak rastgele örnekleme.
+	Reservoir Sampling: Akış halinde gelen verilerden rastgele örnekleme.
+	Random Forests: Karar ağaçlarının rastgele alt kümelerini kullanarak sınıflandırma ve regresyon.
+
+@Kombinatorik (Combinatorics)
+	Permutations: Elemanların sıralı kombinasyonları.
+	Combinations: Elemanların sırasız kombinasyonları.
+	Subset Generation: Bir kümenin alt kümelerinin oluşturulması.
+	Binomial Coefficient Calculation: Kombinasyon sayılarının hesaplanması.	
