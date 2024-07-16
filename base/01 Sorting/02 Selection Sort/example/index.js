@@ -8,7 +8,7 @@ const selectionSort = (arr) => {
 
     // Ищем наименьший элемент в оставшейся части массива
     for (let j = i + 1; j < n; j++) {
-      if (arr[j] < arr[minIndex]) {
+      if (arr[minIndex] > arr[j]) {
         minIndex = j;
       }
     }
@@ -25,8 +25,6 @@ const selectionSort = (arr) => {
   return arr;
 };
 
-// let arr = [64, 25, 12, 22, 11];
-// let arr = [29,72,98,13,87,66,52,51,36];
-let arr = [7, 5, 1, 8, 2];
+let arr = [5, 4, 3, 2, 1];
 console.log(arr);
 console.log(selectionSort(arr));

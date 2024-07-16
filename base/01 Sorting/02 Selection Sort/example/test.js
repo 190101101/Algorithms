@@ -1,6 +1,23 @@
-const selectionSort = (arr) => {};
+const selectionSort = (arr) => {
+  let n = arr.length;
 
-let arr = [7, 5, 1, 8, 2];
+  for (let i = 0; i < n; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < n; j++) {
+      if (arr[minIndex] > arr[j]) {
+        minIndex = j;
+      }
+    }
+
+    if (minIndex !== i) {
+      let temp = arr[i];
+      arr[i] = arr[minIndex];
+      arr[minIndex] = temp;
+    }
+  }
+};
+
+let arr = [5, 4, 3, 2, 1];
 console.log(`[+] => [${arr}]`);
 selectionSort(arr);
 console.log(`[+] => [${arr}]`);
