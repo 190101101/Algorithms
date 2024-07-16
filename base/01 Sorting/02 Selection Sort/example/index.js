@@ -23,6 +23,7 @@ const selectionSort = (arr) => {
   return arr;
 };
 
-let arr = [64, 25, 12, 22, 11];
+// let arr = [64, 25, 12, 22, 11];
+let arr = [7, 5, 1, 8, 2];
 console.log(arr);
 console.log(selectionSort(arr));

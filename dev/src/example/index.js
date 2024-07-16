@@ -18,11 +18,15 @@ const selectionSort = (arr) => {
       let temp = arr[i];
       arr[i] = arr[minIndex];
       arr[minIndex] = temp;
+      console.log(arr);
     }
   }
+
   return arr;
 };
 
-let arr = [64, 25, 12, 22, 11];
+// let arr = [64, 25, 12, 22, 11];
+// let arr = [29,72,98,13,87,66,52,51,36];
+let arr = [7, 5, 1, 8, 2];
 console.log(arr);
 console.log(selectionSort(arr));
