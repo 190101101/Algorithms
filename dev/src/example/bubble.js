@@ -1,4 +1,4 @@
-const selectionSort = (arr) => {};
+const bubbleSort = (arr) => {};
 
 let arr = [7, 5, 1, 8, 2];
 console.log(`[+] => [${arr}]`);
