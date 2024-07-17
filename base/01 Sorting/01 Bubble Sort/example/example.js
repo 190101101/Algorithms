@@ -1,15 +1,17 @@
-const bubbleSort = (p1) => {
-  for (let i = 0; i < p1.length; i++) {
-    for (let j = 0; j < p1.length - 1 - i; j++) {
-      if (p1[j] > p1[j + 1]) {
-        const temp = p1[j];
-        p1[j] = p1[j + 1];
-        p1[j + 1] = temp;
+const bubbleSort = (arr) => {
+  let n = arr.length;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
       }
     }
   }
+  return arr;
 };
 
-const p1 = [2, 5, 4, 3];
-bubbleSort(p1);
-console.log(p1);
+const arr = [5, 4, 3, 2, 1];
+bubbleSort(arr);
+console.log(arr);
