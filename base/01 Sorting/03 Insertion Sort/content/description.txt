@@ -1,0 +1,189 @@
+Selam Orxan! Insertion Sort algoritmasını açıklayayım ve bir JavaScript kod örneği vereyim.
+
+### Insertion Sort Algoritması
+
+**Genel Bakış:**
+Insertion Sort, sıralanmamış bir diziyi elemanları birer birer alıp doğru konumlarına yerleştirerek sıralar. Bir kart destesi sıralar gibi çalışır: her kartı alır ve zaten sıralı olan kartlar arasında doğru yerine yerleştirir.
+
+### Adım Adım Açıklama:
+
+1. İlk eleman zaten sıralı kabul edilir.
+2. İkinci eleman alınır ve sıralı kısımda doğru yerine yerleştirilir.
+3. Üçüncü eleman alınır ve sıralı kısımda doğru yerine yerleştirilir.
+4. Bu işlem, dizinin sonuna kadar devam eder.
+
+### Kod Örneği:
+
+İşte JavaScript'te Insertion Sort algoritmasının kodu ve adım adım açıklaması:
+
+```javascript
+function insertionSort(arr) {
+    let n = arr.length;
+    for (let i = 1; i < n; i++) {
+        let key = arr[i]; // Вставляемый элемент
+        let j = i - 1;
+
+        // Сдвигаем элементы массива arr[0..i-1], которые больше key, на одну позицию вперед
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key; // Вставляем key в правильную позицию
+    }
+    return arr;
+}
+
+// Пример использования
+let arr = [12, 11, 13, 5, 6];
+console.log("Сортированный массив:", insertionSort(arr)); // Вывод: [5, 6, 11, 12, 13]
+```
+
+### Açıklama:
+
+1. **Dış Döngü:**
+   - `for (let i = 1; i < n; i++)`
+     - `i = 1`'den başlayarak dizinin sonuna kadar gider.
+     - `i` sıralanacak elemanı temsil eder.
+
+2. **Anahtar Değeri:**
+   - `let key = arr[i]`
+     - `key`, sıralanacak elemanı (mevcut eleman) temsil eder.
+
+3. **İç Döngü:**
+   - `let j = i - 1`
+     - `j`, sıralı kısmın sonundaki indeksi temsil eder.
+   - `while (j >= 0 && arr[j] > key)`
+     - Sıralı kısmı sağa kaydırarak `key` için doğru konumu bulur.
+     - `arr[j] > key` koşulu sağlandıkça elemanlar bir pozisyon sağa kaydırılır.
+
+4. **Elemanı Yerleştirme:**
+   - `arr[j + 1] = key`
+     - `key`, sıralı kısmın doğru konumuna yerleştirilir.
+
+### Çalışma Prensibi:
+Diziyi bir kart destesi gibi sıralar. Her eleman, sıralı kısmın içine doğru yerine yerleştirilir. Bu işlem, dizinin sonuna kadar devam eder.
+
+### Insertion Sort'un Özellikleri:
+
+- **Zaman Karmaşıklığı:**
+  - Ortalama ve en kötü durumda O(n²).
+- **Stabilite:**
+  - Insertion Sort, stabil bir sıralama algoritmasıdır. Aynı değerlere sahip elemanlar sıralı olarak yer değiştirmezler.
+- **Küçük Veri Setleri İçin Uygun:**
+  - Küçük veri setlerinde ve neredeyse sıralı dizilerde oldukça verimlidir.
+
+Başka soruların varsa veya başka bir algoritmayı incelemek istersen, bana yazabilirsin!
+
+---
+Elbette, bu kodu adım adım açıklayarak nasıl çalıştığını anlatalım.
+
+### Kod:
+
+```javascript
+function insertionSort(arr) {
+    let n = arr.length;
+    for (let i = 1; i < n; i++) {
+        let key = arr[i]; // Вставляемый элемент
+        let j = i - 1;
+
+        // Сдвигаем элементы массива arr[0..i-1], которые больше key, на одну позицию вперед
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key; // Вставляем key в правильную позицию
+    }
+    return arr;
+}
+
+// Пример использования
+let arr = [12, 11, 13, 5, 6];
+console.log("Сортированный массив:", insertionSort(arr)); // Вывод: [5, 6, 11, 12, 13]
+```
+
+### Adım Adım Açıklama:
+
+1. **Fonksiyon Tanımlama ve Başlangıç:**
+   ```javascript
+   function insertionSort(arr) {
+       let n = arr.length;
+   ```
+   - `insertionSort` adında bir fonksiyon tanımlanır.
+   - `n` değişkeni, dizinin uzunluğunu alır.
+
+2. **Dış Döngü:**
+   ```javascript
+   for (let i = 1; i < n; i++) {
+   ```
+   - `i` değişkeni 1'den başlayarak dizinin sonuna kadar gider. İlk eleman zaten sıralı kabul edilir.
+
+3. **Anahtar Değeri ve İç Döngü İçin Hazırlık:**
+   ```javascript
+       let key = arr[i]; // Вставляемый элемент
+       let j = i - 1;
+   ```
+   - `key` değişkeni, sıralanacak elemanı temsil eder.
+   - `j`, `i`'nin bir eksiği olarak tanımlanır ve sıralı kısmın sonundaki indeksi gösterir.
+
+4. **Karşılaştırma ve Kaydırma:**
+   ```javascript
+       while (j >= 0 && arr[j] > key) {
+           arr[j + 1] = arr[j];
+           j = j - 1;
+       }
+   ```
+   - `while` döngüsü, `j`'nin sıfırdan büyük olduğu ve `arr[j]`'nin `key`'den büyük olduğu durumlarda çalışır.
+   - Eğer `arr[j] > key` ise, `arr[j + 1]` değeri `arr[j]` ile değiştirilir, yani eleman sağa kaydırılır.
+   - `j` bir azaltılır ve döngü devam eder.
+
+5. **Anahtar Değerinin Yerleştirilmesi:**
+   ```javascript
+       arr[j + 1] = key; // Вставляем key в правильную позицию
+   ```
+   - Döngü bittiğinde, `key` değişkeni doğru konuma yerleştirilir.
+
+6. **Fonksiyonun Tamamlanması:**
+   ```javascript
+   }
+   return arr;
+   ```
+   - Dış döngü biter ve sıralı dizi geri döndürülür.
+
+### Örnek Kullanım:
+
+```javascript
+let arr = [12, 11, 13, 5, 6];
+console.log("Сортированный массив:", insertionSort(arr)); // Вывод: [5, 6, 11, 12, 13]
+```
+
+### Adım Adım Durumlar:
+
+1. **Başlangıç Durumu:** `[12, 11, 13, 5, 6]`
+2. **i = 1:**
+   - `key = 11`
+   - `j = 0`
+   - `arr[0] > 11` olduğu için `arr[1] = arr[0]` => `[12, 12, 13, 5, 6]`
+   - `arr[0] = 11` => `[11, 12, 13, 5, 6]`
+3. **i = 2:**
+   - `key = 13`
+   - `j = 1`
+   - `arr[1] <= 13` olduğu için yer değiştirme yok => `[11, 12, 13, 5, 6]`
+4. **i = 3:**
+   - `key = 5`
+   - `j = 2`
+   - `arr[2] > 5` olduğu için `arr[3] = arr[2]` => `[11, 12, 13, 13, 6]`
+   - `arr[1] > 5` olduğu için `arr[2] = arr[1]` => `[11, 12, 12, 13, 6]`
+   - `arr[0] > 5` olduğu için `arr[1] = arr[0]` => `[11, 11, 12, 13, 6]`
+   - `arr[0] = 5` => `[5, 11, 12, 13, 6]`
+5. **i = 4:**
+   - `key = 6`
+   - `j = 3`
+   - `arr[3] > 6` olduğu için `arr[4] = arr[3]` => `[5, 11, 12, 13, 13]`
+   - `arr[2] > 6` olduğu için `arr[3] = arr[2]` => `[5, 11, 12, 12, 13]`
+   - `arr[1] > 6` olduğu için `arr[2] = arr[1]` => `[5, 11, 11, 12, 13]`
+   - `arr[1] = 6` => `[5, 6, 11, 12, 13]`
+
+### Sonuç:
+Dizi sıralanmış hale gelir: `[5, 6, 11, 12, 13]`.
+
+Bu şekilde, Insertion Sort algoritması elemanları sıralı bir şekilde yerleştirir. Başka soruların varsa, sormaktan çekinme!
