@@ -1,0 +1,59 @@
+Evet, bu da güzel ve anlaşılır bir kod. `while` döngüsü yerine iç içe `for` döngüsü kullanarak aynı işlemi gerçekleştiren bir versiyon. Adım adım açıklayarak kodun nasıl çalıştığını anlatayım:
+
+### Kod Açıklaması:
+
+```javascript
+const insertionSort = (arr) => {
+  // Внешний цикл проходит по всему массиву, начиная со второго элемента
+  for (let i = 1; i < arr.length; i++) {
+    let currentValue = arr[i]; // Текущий элемент для вставки
+    let j;
+    
+    // Внутренний цикл для сдвига элементов массива
+    for (j = i - 1; j >= 0 && arr[j] > currentValue; j--) {
+      arr[j + 1] = arr[j]; // Сдвигаем элемент вправо
+    }
+    
+    // Вставляем текущий элемент в правильную позицию
+    arr[j + 1] = currentValue;
+  }
+  return arr;
+};
+
+// Пример использования
+let arr = [5, 4, 3, 2, 1];
+insertionSort(arr);
+console.log(arr); // Вывод: [1, 2, 3, 4, 5]
+```
+
+### Adım Adım Açıklama:
+
+1. **Dış Döngü:**
+   - `for (let i = 1; i < arr.length; i++)`
+     - `i = 1`'den başlar ve dizinin sonuna kadar gider.
+     - `i` sıralanacak elemanı temsil eder.
+
+2. **Anahtar Değeri:**
+   - `let currentValue = arr[i]`
+     - `currentValue`, sıralanacak elemanı temsil eder.
+
+3. **İç Döngü:**
+   - `for (let j = i - 1; j >= 0 && arr[j] > currentValue; j--)`
+     - `j`, sıralı kısmın sonundaki indeksi temsil eder.
+     - `j >= 0 && arr[j] > currentValue` koşulu sağlandıkça elemanlar bir pozisyon sağa kaydırılır.
+
+4. **Elemanı Yerleştirme:**
+   - `arr[j + 1] = currentValue`
+     - `currentValue`, sıralı kısmın doğru konumuna yerleştirilir.
+
+### Nasıl Çalışır:
+
+- İlk döngü adımında, `i = 1`, `currentValue = arr[1] = 4`.
+- İç döngü başlar: `j = 0` ve `arr[j] > currentValue` olduğu sürece elemanlar sağa kaydırılır.
+- `currentValue` doğru konuma yerleştirilir.
+- Bu işlem dizinin sonuna kadar devam eder ve her adımda sıralı kısım genişler.
+
+### Özet:
+Bu versiyon, aynı işlemi gerçekleştiren daha okunaklı bir alternatif sunar. İç içe `for` döngüsü kullanarak elemanları doğru konumlarına yerleştirir.
+
+Başka soruların varsa veya başka bir algoritmayı incelemek istersen, bana yazabilirsin!

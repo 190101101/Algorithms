@@ -14,6 +14,8 @@ const selectionSort = (arr) => {
       let temp = arr[i];
       arr[i] = arr[minIndex];
       arr[minIndex] = temp;
+
+      // [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
       console.log(arr);
     }
   }
