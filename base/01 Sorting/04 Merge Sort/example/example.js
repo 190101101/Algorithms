@@ -1,4 +1,4 @@
-function merge(left, right) {
+const merge = (left, right) => {
   let resultArray = [];
   let leftIndex = 0;
   let rightIndex = 0;
@@ -16,9 +16,9 @@ function merge(left, right) {
   return resultArray
     .concat(left.slice(leftIndex))
     .concat(right.slice(rightIndex));
-}
+};
 
-function mergeSort(array) {
+const mergeSort = (array) => {
   if (array.length <= 1) {
     return array;
   }
@@ -28,7 +28,7 @@ function mergeSort(array) {
   const right = array.slice(middle);
 
   return merge(mergeSort(left), mergeSort(right));
-}
+};
 
 const array = [38, 27, 43, 3, 9, 82, 10];
 console.log('Несортированный массив:', array);
