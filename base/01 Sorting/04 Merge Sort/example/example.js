@@ -30,7 +30,7 @@ const mergeSort = (array) => {
   return merge(mergeSort(left), mergeSort(right));
 };
 
-const array = [38, 27, 43, 3, 9, 82, 10];
-console.log('Несортированный массив:', array);
-const sortedArray = mergeSort(array);
-console.log('отсортированный массив:', sortedArray);
+// const array = [38, 27, 43, 3, 9, 82, 10];
+// console.log('Несортированный массив:', array);
+// const sortedArray = mergeSort(array);
+// console.log('отсортированный массив:', sortedArray);
