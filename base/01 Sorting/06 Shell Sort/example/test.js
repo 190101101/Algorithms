@@ -1,6 +1,5 @@
 const shellSort = (arr) => {
   let n = arr.length;
-
   for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
     for (let i = gap; i < n; i++) {
       let temp = arr[i];

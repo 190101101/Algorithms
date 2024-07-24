@@ -5,7 +5,7 @@ const linearSearch = (array, target) => {
   return -1;
 };
 
-const target = 3;
-const array = [1, 2, 3, 4, 5];
+const target = 4;
+const array = [2, 3, 4, 1, 5];
 const result = linearSearch(array, target);
 console.log(result);
