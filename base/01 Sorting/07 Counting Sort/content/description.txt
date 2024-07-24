@@ -1,0 +1,53 @@
+Elbette, Orxan! Shell Sort algoritmasını açıklayalım ve bir örnek üzerinde gösterelim.
+
+### Shell Sort Algoritması
+Shell Sort, sıralama algoritmaları arasında önemli bir yere sahip olan bir tür yerinde sıralama algoritmasıdır. Donald Shell tarafından 1959'da geliştirilmiştir. İnsertion Sort'un genel bir genellemesi olan Shell Sort, büyük aralıklardan başlayarak elemanları karşılaştırır ve sıralar. Aralıklar kademeli olarak azaltılır ve sonunda Insertion Sort'a dönüşür.
+
+#### Shell Sort Ne İçin Kullanılır?
+- Küçük ve orta büyüklükteki veri kümelerinde etkilidir.
+- Bellek üzerinde yerinde çalışır, yani ek bellek kullanmaz.
+- Çeşitli aralık dizileri (gap sequence) kullanarak performansı artırabilir.
+
+### Shell Sort Algoritmasının Adımları
+1. Başlangıçta büyük bir aralık (gap) seç.
+2. Bu aralıkla elemanları karşılaştır ve yer değiştir.
+3. Aralığı küçült ve adım 2'yi tekrarla.
+4. Aralık 1 olduğunda Insertion Sort uygula.
+
+### Shell Sort'un Koduyla Bir Örnek
+Aşağıda Shell Sort algoritmasının JavaScript/TypeScript ile uygulanmış bir örneği bulunmaktadır.
+
+```typescript
+// Функция для выполнения Shell Sort
+function shellSort(arr: number[]): void {
+    let n = arr.length;
+
+    // Начальный gap (интервал) равен половине длины массива
+    for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
+        // Выполняем сортировку вставками для каждого gap
+        for (let i = gap; i < n; i++) {
+            let temp = arr[i];
+
+            // Сдвиг элементов массива для корректного размещения arr[i]
+            let j;
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+                arr[j] = arr[j - gap];
+            }
+
+            // Вставка temp в правильную позицию
+            arr[j] = temp;
+        }
+    }
+}
+
+// Пример использования
+const arr: number[] = [12, 34, 54, 2, 3];
+console.log("Original array:", arr);
+
+shellSort(arr);
+console.log("Sorted array:", arr);
+```
+
+Bu kod, Shell Sort algoritmasını kullanarak verilen bir dizi sayıyı sıralar. Başlangıçta yarıya bölünmüş bir aralıkla başlar, her adımda aralığı yarıya indirir ve her aralık için Insertion Sort uygular.
+
+Umarım bu açıklama ve örnek Shell Sort'u anlamana yardımcı olur! Başka bir konu hakkında yardım etmeme izin ver, lütfen çekinmeden sor!

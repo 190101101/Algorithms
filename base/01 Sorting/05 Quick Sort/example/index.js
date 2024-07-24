@@ -25,6 +25,6 @@ function quickSort(array) {
 
 // Test etmek için örnek dizi
 const array = [38, 27, 43, 3, 9, 82, 10];
-console.log("Unsorted array:", array);
+console.log('Unsorted array:', array);
 const sortedArray = quickSort(array);
-console.log("Sorted array:", sortedArray);
+console.log('Sorted array:', sortedArray);
