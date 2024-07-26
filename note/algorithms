@@ -23,6 +23,19 @@
 	Interpolation Search
 	Exponential Search
 
+	
+@Dinamik Programlama (Dynamic Programming)
+	Fibonacci Sequence
+	Longest Common Subsequence (LCS)
+	Longest Increasing Subsequence (LIS)
+	Knapsack Problem
+	Edit Distance
+	Coin Change Problem
+	Matrix Chain Multiplication
+	Partition Problem
+	Rod Cutting Problem
+	Subset Sum Problem
+
 @Grafik Algoritmaları (Graph Algorithms)
 	Dijkstras Algorithm
 	Bellman-Ford Algorithm
@@ -35,18 +48,6 @@
 	Kosarajus Algorithm
 	Topological Sorting
 	Edmonds-Karp Algorithm (for maximum flow)
-
-@Dinamik Programlama (Dynamic Programming)
-	Fibonacci Sequence
-	Longest Common Subsequence (LCS)
-	Longest Increasing Subsequence (LIS)
-	Knapsack Problem
-	Edit Distance
-	Coin Change Problem
-	Matrix Chain Multiplication
-	Partition Problem
-	Rod Cutting Problem
-	Subset Sum Problem
 
 @Ayır ve Fethet (Divide and Conquer)
 	Merge Sort
