@@ -1,11 +1,21 @@
-const fibonacci = (n) => {
-  let fib = [0, 1];
-  for (let i = 2; i <= n; i++) {
-    fib[i] = fib[i - 2] + fib[i - 1];
+const longestCommonSubsequence = (a, b) => {
+  let arr = Array(a.length + 1).fill();
+  let matrix = arr.map(() => Array(b.length + 1).fill(0));
+
+  for (let i = 1; i < a.length + 1; i++) {
+    for (let j = 1; j < b.length + 1; j++) {
+      if (a[i - 1] === b[j - 1]) {
+        matrix[i][j] = 1 + matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.max(matrix[i - 1][j], matrix[i][j - 1]);
+      }
+    }
   }
-  return fib;
+
+  return matrix[a.length][b.length];
 };
 
-const n = 10;
-const result = fibonacci(n);
+let a = [2, 3, 4, 7];
+let b = [2, 3, 7, 8, 4];
+const result = longestCommonSubsequence(a, b);
 console.log(result);
